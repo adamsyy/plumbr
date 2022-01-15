@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155197608508",
+    "project_id": "plumbr-db4a1",
+    "storage_bucket": "plumbr-db4a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155197608508:android:a19f300f04f452890ce939",
+        "android_client_info": {
+          "package_name": "com.example.plumbr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155197608508-ub1b0bhabflkb5i9sldfse52tbd83mnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4USUSBc6cg11yFBdbm_zZI6VTyNkLFc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155197608508-ub1b0bhabflkb5i9sldfse52tbd83mnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
