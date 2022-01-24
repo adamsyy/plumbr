@@ -5,6 +5,7 @@ import 'package:plumbr/general/Start.dart';
 import 'package:plumbr/random/Test.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:plumbr/recruiter/Recruiterdashboard.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: Start(),
+      home: Recruiterdashboard(),
     );
   }
 }

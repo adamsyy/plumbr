@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import '../components/Component21.dart';
+import '../random/Component21.dart';
 
 class Dashboard extends StatelessWidget {
 
