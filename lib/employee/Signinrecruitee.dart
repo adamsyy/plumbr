@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import '../random/Forgotpassword.dart';
 import 'package:adobe_xd/page_link.dart';
-import 'CreateAccountRecruite.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../random/Msgscren.dart';
+import 'CreateAccountemployee.dart';
 String email;
 String pass;
-
 
 
 final _auth = FirebaseAuth.instance;
@@ -165,7 +164,7 @@ class Signinrecruitee extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => CreateAccountRecruite(),
+                        pageBuilder: () => CreateAccountemployee(),
                       ),
                     ],
                     child: Text(

@@ -224,7 +224,9 @@ class _CreateAccountemployeeState extends State<CreateAccountemployee> {
                         email: email, password: pass);
                     fire.collection('employee').add({
                       'latittude':latitude,
-                      'longitude':longitude
+                      'longitude':longitude,
+                      'email':email,
+                      'phone':phoneno,
                     });
                     if(newuser!=null){
 
