@@ -12,6 +12,7 @@ String username='';
 String email='';
 String phoneno='';
 String pass='';
+String work='';
 final fire = FirebaseFirestore.instance;
 
 class CreateAccountemployee extends StatefulWidget {
@@ -123,6 +124,25 @@ class _CreateAccountemployeeState extends State<CreateAccountemployee> {
                   }),
                 ),
                 Pinned.fromPins(
+                  Pin(size: 200.0, middle: 0.2762),
+                  Pin(size: 26.0, middle: 0.754),
+                  child: DropdownButton<String>(hint: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: Text('Select the work you do'),
+                  ),
+                    items: <String>['Maid', 'Electrician','Driver'].map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String workselected) {
+                    work=workselected;
+                    print(work);
+                    },
+                  )
+                ),
+                Pinned.fromPins(
                   Pin(size: 108.0, middle: 0.5211),
                   Pin(size: 33.0, middle: 0.3356),
                   child:
@@ -208,7 +228,7 @@ class _CreateAccountemployeeState extends State<CreateAccountemployee> {
               children: <Widget>[
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
+                  Pin(start: 1.0, end: 1.0),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24.0),
@@ -227,6 +247,7 @@ class _CreateAccountemployeeState extends State<CreateAccountemployee> {
                       'longitude':longitude,
                       'email':email,
                       'phone':phoneno,
+                      'work':work,
                     });
                     if(newuser!=null){
 
