@@ -25,4 +25,8 @@ Suppose the user wants to hire someone tfor paining:
 ![2](https://user-images.githubusercontent.com/75473780/152063542-2a8e1cb7-3abb-4a2b-a428-b5d3b4fc8b37.jpg)
 ![img](https://user-images.githubusercontent.com/75473780/152063391-8e1aca46-915f-423f-b82e-7c52f1afb1a1.jpg)
 
-
+## Contributors
+1. [Mohammad Salman Ali pary](https://github.com/salmanpary)
+2. [Athul Reji](https://github.com/athulreji)
+3. [Amjad Ali](https://github.com/I-Am-Blind)
+4. [Adithya Kartha](https://github.com/adithyakartha)
