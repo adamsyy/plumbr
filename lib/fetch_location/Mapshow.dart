@@ -40,12 +40,31 @@ class _MapshowState extends State<Mapshow> {
     });
   }
   Future getDocs() async{
+    int x=2;
     await FirebaseFirestore.instance
         .collection('employee')
         .get()
         .then((QuerySnapshot querySnapshot) {
       querySnapshot.docs.forEach((doc) {
-        if(doc["work"].toString()=="Maid"){  list.add(doc["email"]);
+        if(doc["work"].toString()=="Maid"){
+x++;
+          setState(() {
+            _markers.add(
+              Marker(
+                markerId: MarkerId('id-$x'),
+                position: LatLng(doc["latittude"]+2, doc["longitude"]+2),
+                  infoWindow: InfoWindow(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return Payment();
+                        }));
+                      },
+                      title: doc["email"],
+                      snippet: doc["phone"])),
+
+
+            );
+          });
         }
       } );
     });
@@ -55,11 +74,11 @@ class _MapshowState extends State<Mapshow> {
   @override
   void initState() {
 
-
+    getDocs();
     getcurrentlocation();
     addPolyLine();
     makeLines();
-    getDocs();
+
     super.initState();
   }
 
