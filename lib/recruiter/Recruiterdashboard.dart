@@ -134,7 +134,7 @@ class Recruiterdashboard extends StatelessWidget {
             child: GestureDetector(onTap: ()async{
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) {
-                    return Mapshow();
+                    return Mapshow(joli: "Maid",);
                   }));
             },
               child: Text(
@@ -154,7 +154,7 @@ class Recruiterdashboard extends StatelessWidget {
             child: GestureDetector(onTap: ()async{
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) {
-                    return Mapshow();
+                    return Mapshow(joli: "Electrician",);
                   }));
             },
               child: Text(
@@ -174,7 +174,7 @@ class Recruiterdashboard extends StatelessWidget {
             child: GestureDetector(onTap: ()async{
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) {
-                    return Mapshow();
+                    return Mapshow(joli: "Driver",);
                   }));
             },
               child: Text(

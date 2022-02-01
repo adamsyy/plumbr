@@ -39,6 +39,8 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   font_awesome_flutter: ^9.0.0
   razorpay_flutter: ^1.2.3
+  url_launcher: ^6.0.18
+  flutter_phone_direct_caller: ^2.1.0
 
 dev_dependencies:
   flutter_test:

@@ -1,13 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../random/Thanks.dart';
 String pin;
 String address;
+String no;
 class Payment extends StatefulWidget {
-
+Payment({String number}){
+  no=number;
+}
   @override
   _PaymentState createState() => _PaymentState();
 }
@@ -134,6 +139,7 @@ class _PaymentState extends State<Payment> {
                   ),
                 ),
               ),
+
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(height: 350, decoration: BoxDecoration(color: Colors.grey[200],borderRadius: BorderRadius.circular(8.0),
@@ -162,7 +168,7 @@ class _PaymentState extends State<Payment> {
                             },
                             decoration: InputDecoration(border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black.withOpacity(0.8))),
 
-                                hintText: 'Enter your pincode',hintStyle:TextStyle(fontWeight: FontWeight.w100,fontStyle: FontStyle.italic),suffixStyle: TextStyle(color: Colors.black)
+                                hintText: 'Add work details',hintStyle:TextStyle(fontWeight: FontWeight.w100,fontStyle: FontStyle.italic),suffixStyle: TextStyle(color: Colors.black)
                             ),
                           ),
 
@@ -178,19 +184,18 @@ class _PaymentState extends State<Payment> {
                             },
                             decoration: InputDecoration(border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black.withOpacity(0.8))),
 
-                                hintText: 'Enter your Address',hintStyle:TextStyle(fontWeight: FontWeight.w100,fontStyle: FontStyle.italic),suffixStyle: TextStyle(color: Colors.black)
+                                hintText: 'any extra information',hintStyle:TextStyle(fontWeight: FontWeight.w100,fontStyle: FontStyle.italic),suffixStyle: TextStyle(color: Colors.black)
                             ),
                           ),
 
                         ),
                       ),
                       SizedBox(height: 12,),
-                      RaisedButton(onPressed: (){
+
+                      RaisedButton(onPressed: ()async{
                         if(address!=null&&pin!=null) {
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return Thanks();
-                              }));
+                          var number=no;
+                          bool res=await FlutterPhoneDirectCaller.callNumber(number);
                         }
                         else{
                           showDialog(
@@ -208,13 +213,14 @@ class _PaymentState extends State<Payment> {
                                       Navigator.of(context).pop();
                                     },
                                   ),
+
                                 ],
                               );
                             },
                           );
                         }
 
-                      },child: Text('Cash On delivery',style: TextStyle(color: Colors.white),),color: Colors.black,elevation: 4,shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)))
+                      },child: Text('Call',style: TextStyle(color: Colors.white),),color: Colors.black,elevation: 4,shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)))
                     ],
                   ),
                 ),

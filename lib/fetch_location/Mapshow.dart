@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +11,12 @@ import 'package:plumbr/general/Payment.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:ui' as ui;
 import 'dart:typed_data';
-
+PolylinePoints polylinePoints = PolylinePoints();
 final _auth = FirebaseAuth.instance;
 final fire = FirebaseFirestore.instance;
 List<String> list = new List<String>();
 double latitude;
 double longitude;
-PolylinePoints polylinePoints = PolylinePoints();
 Map<PolylineId, Polyline> polylines = {};
 List<LatLng> polylineCoordinates = [];
 String job;
@@ -30,7 +31,8 @@ class Mapshow extends StatefulWidget {
 }
 
 class _MapshowState extends State<Mapshow> {
-  Set<Marker> _markers = {};
+  final Set<Marker> _markers = {};
+
 
   Future getDocs() async {
     final Uint8List customMarker= await getBytesFromAsset(
@@ -48,12 +50,12 @@ class _MapshowState extends State<Mapshow> {
             _markers.add(
               Marker(icon: BitmapDescriptor.fromBytes(customMarker),
                   markerId: MarkerId('id-$x'),
-                  position: LatLng(doc["latittude"] + 2, doc["longitude"] + 2),
+                  position: LatLng(doc["latittude"] , doc["longitude"]),
                   infoWindow: InfoWindow(
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return Payment();
+                          return Payment(number: doc["phone"],);
                         }));
                       },
                       title: doc["email"],
@@ -79,14 +81,18 @@ class _MapshowState extends State<Mapshow> {
   }
   
 
-
+Set<Polyline> _polylines=Set<Polyline>();
+  List<LatLng> polylinecordinates=[];
+  PolylinePoints polylinePoints;
   @override
   void initState() {
+
+
     getDocs();
     getcurrentlocation();
     
-    addPolyLine();
-    makeLines();
+
+
 
     super.initState();
   }
@@ -126,40 +132,33 @@ class _MapshowState extends State<Mapshow> {
 
   }
 
-  addPolyLine() {
-    PolylineId id = PolylineId("poly");
-    Polyline polyline = Polyline(
-        polylineId: id, color: Colors.red, points: polylineCoordinates);
-    polylines[id] = polyline;
-    setState(() {});
-  }
 
-  void makeLines() async {
-    await polylinePoints
-        .getRouteBetweenCoordinates(
-      'AIzaSyC0mDpWjR6y6mIwWIpRV6O7uAeQr_gaFSI',
-      PointLatLng(latitude, longitude), //Starting LATLANG
-      PointLatLng(20.8505, 76.2711), //End LATLANG
-      travelMode: TravelMode.driving,
-    )
-        .then((value) {
-      value.points.forEach((PointLatLng point) {
-        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
-      });
-    }).then((value) {
-      addPolyLine();
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: GoogleMap(
-      polylines: Set<Polyline>.of(polylines.values),
-      onMapCreated: null,
+polylines: _polylines,
+      onMapCreated: (GoogleMapController controller){
+  setpolylines();
+      },
       markers: _markers,
+
       initialCameraPosition:
           CameraPosition(target: LatLng(10.8505, 76.2711), zoom: 5),
     ));
+  }
+
+  void setpolylines()async{
+    PolylineResult result=await polylinePoints.getRouteBetweenCoordinates("AIzaSyCEaait6-hAjeXn0zgNNwJNHk1LEOzzl9Q", PointLatLng(29.0, 76.0),PointLatLng(10.8505, 76.433));
+  if(result.status=='OK'){
+    result.points.forEach((PointLatLng point) {
+     polylinecordinates.add(LatLng(point.latitude, point.longitude));
+    });
+  }
+setState(() {
+  _polylines.add(Polyline(width: 100,polylineId: PolylineId('polyline'),points: polylinecordinates));
+
+});
   }
 }
