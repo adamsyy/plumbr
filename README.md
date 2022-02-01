@@ -21,5 +21,5 @@ Suppose the user wants to hire someone tfor paining:
 4. Adobe XD
 
 ## App Welcome screens
-![one](https://user-images.githubusercontent.com/75473780/152061394-b9cb19cc-fadd-4473-a0d3-3997c6e74457.jpg)
+![one](https://cdn1.bbcode0.com/uploads/2022/2/2/c0be702d3609063fdafb3331be046007-full.jpg)
 
