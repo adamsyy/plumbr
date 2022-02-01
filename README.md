@@ -7,7 +7,7 @@ Due to the covid-19 pandemic a lot of the daily workers lost their job, with the
 In a time where workers from other states(Bengal, Orissa) earn more than most of  the government officials, our app would revolutionize the field of employment  because anyone can be an employee. to help upgrade local businesses and  produce an online presence for them. Due to the emergence of online agencies  that provide their services, these small business owners are in a state of danger.
 
 ## How Plumbr works 
-Suppose the user wants to hire someone to cut the grass: 
+Suppose the user wants to hire someone tfor paining:
 1. He logs into the app. 
 2. Selects the gardening section. 
 3. He gets the realtime location of the employees nearby(within10km as  default). 
