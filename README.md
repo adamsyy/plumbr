@@ -17,7 +17,7 @@ Suppose the user wants to hire someone for paining:
 2. Selects the gardening section. 
 3. He gets the realtime location of the employees nearby(within10km as default). 
 4. The user can select the employees’ profile which includes his rating, reviews, hiring charges and the list of works he do. There will also be a separate section featuring the top rated employee at the user's location. 
-5. After completing the work, the customer has to mark the work as ‘finished’.
+5. After completing the work, the customer has to mark the work as ‘completed’.
 6. The employee will receive an OTP, which the customer has to enter in the Plumbr to complete the payment. 
 
 ## Tech stacks used
