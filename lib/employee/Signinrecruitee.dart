@@ -13,7 +13,7 @@ String pass;
 
 final _auth = FirebaseAuth.instance;
 class Signinrecruitee extends StatelessWidget {
-  Signinrecruitee({
+  const Signinrecruitee({
     Key key,
   }) : super(key: key);
   @override
@@ -53,12 +53,12 @@ class Signinrecruitee extends StatelessWidget {
                           }));
                     }
                   },
-                    child: Text(
+                    child: const Text(
                       'Sign insss',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 35,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w700,
                       ),
                       textAlign: TextAlign.left,
@@ -68,7 +68,7 @@ class Signinrecruitee extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 120.0, middle: 0.2634),
                   Pin(size: 26.0, middle: 0.5303),
-                  child: TextField(decoration: InputDecoration(
+                  child: TextField(decoration: const InputDecoration(
                     hintText: 'email',
 
                   ),onChanged: (String y){
@@ -78,7 +78,7 @@ class Signinrecruitee extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 120.0, middle: 0.2634),
                   Pin(size: 26.0, middle: 0.6161),
-                  child: TextField(decoration: InputDecoration(
+                  child: TextField(decoration: const InputDecoration(
                     hintText: 'Password',
 
                   ),onChanged: (String y){
@@ -93,15 +93,15 @@ class Signinrecruitee extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => Forgotpassword(),
+                        pageBuilder: () => const Forgotpassword(),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       'Forgot password ?',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w300,
                       ),
                       textAlign: TextAlign.left,
@@ -118,12 +118,12 @@ class Signinrecruitee extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 33.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'plumbr.',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 25,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -142,12 +142,12 @@ class Signinrecruitee extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 20.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'All Rights Reserved',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 15,
-                            color: const Color(0xff3c3c3c),
+                            color: Color(0xff3c3c3c),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -167,12 +167,12 @@ class Signinrecruitee extends StatelessWidget {
                         pageBuilder: () => CreateAccountemployee(),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       'Create an account',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w300,
                         height: 2.5,
                       ),
@@ -227,12 +227,12 @@ class Signinrecruitee extends StatelessWidget {
                             }));
                       }
                     },
-                      child: Text(
+                      child: const Text(
                         'Sign Iniii',
                         style: TextStyle(
                           fontFamily: 'Roboto',
                           fontSize: 20,
-                          color: const Color(0xffffffff),
+                          color: Color(0xffffffff),
                           fontWeight: FontWeight.w300,
                         ),
                         textAlign: TextAlign.left,
@@ -253,12 +253,12 @@ class Signinrecruitee extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 39.0, middle: 0.5),
-                  child: Text(
+                  child: const Text(
                     'employee',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 30,
-                      color: const Color(0xff3b3b3b),
+                      color: Color(0xff3b3b3b),
                       fontWeight: FontWeight.w300,
                     ),
                     textAlign: TextAlign.left,

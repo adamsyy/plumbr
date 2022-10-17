@@ -10,6 +10,6 @@ class Msgscren extends StatefulWidget {
 class _MsgscrenState extends State<Msgscren> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(),body:Text('Thanks for registering, we will let you in soon'),);
+    return Scaffold(appBar: AppBar(),body:const Text('Thanks for registering, we will let you in soon'),);
   }
 }

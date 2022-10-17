@@ -30,7 +30,7 @@ class Recruiterdashboard extends StatelessWidget {
                 ),
                 Positioned.fill(
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(0.0, 136.0, 0.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(0.0, 136.0, 0.0, 0.0),
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromPins(
@@ -39,8 +39,8 @@ class Recruiterdashboard extends StatelessWidget {
                           child: BlendMask(
                             blendMode: BlendMode.screen,
                             child: Container(
-                              decoration: BoxDecoration(
-                                color: const Color(0x80ffffff),
+                              decoration: const BoxDecoration(
+                                color: Color(0x80ffffff),
                               ),
                             ),
                           ),
@@ -74,8 +74,8 @@ class Recruiterdashboard extends StatelessWidget {
                   child: BlendMask(
                     blendMode: BlendMode.screen,
                     child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0x80ffffff),
+                      decoration: const BoxDecoration(
+                        color: Color(0x80ffffff),
                       ),
                     ),
                   ),
@@ -105,8 +105,8 @@ class Recruiterdashboard extends StatelessWidget {
                   child: BlendMask(
                     blendMode: BlendMode.screen,
                     child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0x80ffffff),
+                      decoration: const BoxDecoration(
+                        color: Color(0x80ffffff),
                       ),
                     ),
                   ),
@@ -120,9 +120,9 @@ class Recruiterdashboard extends StatelessWidget {
             child:
                 // Adobe XD layer: 'maid' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: AssetImage(''),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -137,12 +137,12 @@ class Recruiterdashboard extends StatelessWidget {
                     return Mapshow(joli: "Maid",);
                   }));
             },
-              child: Text(
+              child: const Text(
                 'Maid',
                 style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 25,
-                  color: const Color(0xff3b3b3b),
+                  color: Color(0xff3b3b3b),
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -157,12 +157,12 @@ class Recruiterdashboard extends StatelessWidget {
                     return Mapshow(joli: "Electrician",);
                   }));
             },
-              child: Text(
+              child: const Text(
                 'Electrician',
                 style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 25,
-                  color: const Color(0xff3b3b3b),
+                  color: Color(0xff3b3b3b),
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -177,12 +177,12 @@ class Recruiterdashboard extends StatelessWidget {
                     return Mapshow(joli: "Driver",);
                   }));
             },
-              child: Text(
+              child: const Text(
                 'Driver',
                 style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 25,
-                  color: const Color(0xff3b3b3b),
+                  color: Color(0xff3b3b3b),
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -194,9 +194,9 @@ class Recruiterdashboard extends StatelessWidget {
             child:
                 // Adobe XD layer: 'electrician' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: AssetImage(''),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -208,9 +208,9 @@ class Recruiterdashboard extends StatelessWidget {
             child:
                 // Adobe XD layer: 'driver' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: AssetImage(''),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -224,12 +224,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 26.0, middle: 0.5),
-                  child: Text(
+                  child: const Text(
                     'Find workers near you',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 20,
-                      color: const Color(0xff3b3b3b),
+                      color: Color(0xff3b3b3b),
                       fontWeight: FontWeight.w300,
                     ),
                     textAlign: TextAlign.left,
@@ -248,12 +248,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 27.0, start: 31.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '39',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -264,12 +264,12 @@ class Recruiterdashboard extends StatelessWidget {
                   Pin(size: 20.0, middle: 0.5),
                   child: Transform.rotate(
                     angle: 0.0175,
-                    child: Text(
+                    child: const Text(
                       '300+',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 15,
-                        color: const Color(0xff535353),
+                        color: Color(0xff535353),
                         fontWeight: FontWeight.w100,
                       ),
                       textAlign: TextAlign.left,
@@ -279,12 +279,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 0.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '<24hrs',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -296,9 +296,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'available' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -310,9 +310,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'rupee (1)' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -324,9 +324,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'back-in-time' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -345,12 +345,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 27.0, start: 31.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '120',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -361,12 +361,12 @@ class Recruiterdashboard extends StatelessWidget {
                   Pin(size: 20.0, middle: 0.5),
                   child: Transform.rotate(
                     angle: 0.0175,
-                    child: Text(
+                    child: const Text(
                       '500+',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 15,
-                        color: const Color(0xff535353),
+                        color: Color(0xff535353),
                         fontWeight: FontWeight.w100,
                       ),
                       textAlign: TextAlign.left,
@@ -376,12 +376,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 0.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '<24hrs',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -393,9 +393,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'available' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -407,9 +407,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'rupee (1)' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -421,9 +421,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'back-in-time' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -442,12 +442,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 27.0, start: 31.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '48',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -458,12 +458,12 @@ class Recruiterdashboard extends StatelessWidget {
                   Pin(size: 20.0, middle: 0.5105),
                   child: Transform.rotate(
                     angle: 0.0175,
-                    child: Text(
+                    child: const Text(
                       '1000+',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 15,
-                        color: const Color(0xff535353),
+                        color: Color(0xff535353),
                         fontWeight: FontWeight.w100,
                       ),
                       textAlign: TextAlign.left,
@@ -473,12 +473,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 0.0),
                   Pin(size: 20.0, middle: 0.6),
-                  child: Text(
+                  child: const Text(
                     '<24hrs',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xff535353),
+                      color: Color(0xff535353),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -490,9 +490,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'available' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -504,9 +504,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'rupee (1)' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -518,9 +518,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'back-in-time' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -552,9 +552,9 @@ class Recruiterdashboard extends StatelessWidget {
                   child:
                       // Adobe XD layer: 'pin' (shape)
                       Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: const AssetImage(''),
+                        image: AssetImage(''),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -563,12 +563,12 @@ class Recruiterdashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 194.0, start: 54.0),
                   Pin(size: 20.0, middle: 0.5882),
-                  child: Text(
+                  child: const Text(
                     'Model Engineering College ..',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 15,
-                      color: const Color(0xffffffff),
+                      color: Color(0xffffffff),
                     ),
                     textAlign: TextAlign.left,
                   ),

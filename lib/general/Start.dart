@@ -6,7 +6,7 @@ import '../employee/Employee.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Start extends StatelessWidget {
-  Start({
+  const Start({
     Key key,
   }) : super(key: key);
   @override
@@ -41,12 +41,12 @@ class Start extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 92.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'plumbr.',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 70,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -63,7 +63,7 @@ class Start extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => Recruiter(),
+                        pageBuilder: () => const Recruiter(),
                       ),
                     ],
                     child: Stack(
@@ -80,12 +80,12 @@ class Start extends StatelessWidget {
                         Pinned.fromPins(
                           Pin(size: 101.0, start: 19.5),
                           Pin(size: 33.0, middle: 0.0),
-                          child: Text(
+                          child: const Text(
                             'Recruiter',
                             style: TextStyle(
                               fontFamily: 'Roboto',
                               fontSize: 25,
-                              color: const Color(0xff3b3b3b),
+                              color: Color(0xff3b3b3b),
                               fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.left,
@@ -117,15 +117,15 @@ class Start extends StatelessWidget {
                             PageLinkInfo(
                               ease: Curves.easeInOut,
                               duration: 0.4,
-                              pageBuilder: () => Employee(),
+                              pageBuilder: () => const Employee(),
                             ),
                           ],
-                          child: Text(
+                          child: const Text(
                             'Employee',
                             style: TextStyle(
                               fontFamily: 'Roboto',
                               fontSize: 25,
-                              color: const Color(0xff3b3b3b),
+                              color: Color(0xff3b3b3b),
                               fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.left,
@@ -138,12 +138,12 @@ class Start extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 181.0, middle: 0.4067),
                   Pin(size: 66.0, end: 131.5),
-                  child: Text(
+                  child: const Text(
                     'Continue As\n',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 25,
-                      color: const Color(0xff292828),
+                      color: Color(0xff292828),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.center,

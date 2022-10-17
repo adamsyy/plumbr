@@ -5,7 +5,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Forgotpassword extends StatelessWidget {
-  Forgotpassword({
+  const Forgotpassword({
     Key key,
   }) : super(key: key);
   @override
@@ -33,12 +33,12 @@ class Forgotpassword extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 49.0, end: 48.0),
                   Pin(size: 46.0, start: 119.0),
-                  child: Text(
+                  child: const Text(
                     'Reset password',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 35,
-                      color: const Color(0xff3c3c3c),
+                      color: Color(0xff3c3c3c),
                       fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.left,
@@ -47,14 +47,14 @@ class Forgotpassword extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 50.0, middle: 0.2892),
-                  child: Scrollbar(
+                  child: const Scrollbar(
                     child: SingleChildScrollView(
                       child: Text(
                         'We\'ll send a link to reset your passwor don your registered email id',
                         style: TextStyle(
                           fontFamily: 'Roboto',
                           fontSize: 20,
-                          color: const Color(0xff3c3c3c),
+                          color: Color(0xff3c3c3c),
                           fontWeight: FontWeight.w300,
                         ),
                         textAlign: TextAlign.center,
@@ -65,12 +65,12 @@ class Forgotpassword extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 120.0, start: 21.0),
                   Pin(size: 26.0, middle: 0.4157),
-                  child: Text(
+                  child: const Text(
                     'Email Id',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 20,
-                      color: const Color(0xff3c3c3c),
+                      color: Color(0xff3c3c3c),
                       fontWeight: FontWeight.w300,
                     ),
                     textAlign: TextAlign.left,
@@ -86,12 +86,12 @@ class Forgotpassword extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 33.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'plumbr.',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 25,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -110,12 +110,12 @@ class Forgotpassword extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 20.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'All Rights Reserved',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 15,
-                            color: const Color(0xff3c3c3c),
+                            color: Color(0xff3c3c3c),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -132,15 +132,15 @@ class Forgotpassword extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => Start(),
+                        pageBuilder: () => const Start(),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       'Back',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w300,
                         height: 2.5,
                       ),
@@ -174,12 +174,12 @@ class Forgotpassword extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 43.0, end: 43.0),
                   Pin(size: 26.0, middle: 0.5714),
-                  child: Text(
+                  child: const Text(
                     'Reset password',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 20,
-                      color: const Color(0xffffffff),
+                      color: Color(0xffffffff),
                       fontWeight: FontWeight.w300,
                     ),
                     textAlign: TextAlign.left,

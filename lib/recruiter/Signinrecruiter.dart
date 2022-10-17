@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:plumbr/recruiter/Recruiter.dart';
 import 'package:plumbr/recruiter/Recruiterdashboard.dart';
 
-import 'package:plumbr/general/Start.dart';
 import '../random/Forgotpassword.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'CreateAccountRecruiter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
 final _auth = FirebaseAuth.instance;
-String email='';
-String pass='';
+String email = '';
+String pass = '';
+
 class Signinrecruiter extends StatelessWidget {
-  Signinrecruiter({
+  const Signinrecruiter({
     Key key,
   }) : super(key: key);
   @override
@@ -41,12 +41,12 @@ class Signinrecruiter extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 113.0, middle: 0.5),
                   Pin(size: 46.0, middle: 0.4322),
-                  child: Text(
+                  child: const Text(
                     'Sign in',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 35,
-                      color: const Color(0xff3c3c3c),
+                      color: Color(0xff3c3c3c),
                       fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.left,
@@ -55,20 +55,26 @@ class Signinrecruiter extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 200.0, middle: 0.2634),
                   Pin(size: 26.0, middle: 0.5303),
-                  child: TextField(decoration: InputDecoration(
-                    hintText: 'Username',
-                  ),onChanged: (String x){
-                    email=x;
-                  },),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                      hintText: 'Username',
+                    ),
+                    onChanged: (String x) {
+                      email = x;
+                    },
+                  ),
                 ),
                 Pinned.fromPins(
                   Pin(size: 200.0, middle: 0.2634),
                   Pin(size: 26.0, middle: 0.6161),
-                  child: TextField(decoration: InputDecoration(
-                    hintText: 'Password',
-                  ),onChanged: (String y){
-                    pass=y;
-                  },),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                      hintText: 'Password',
+                    ),
+                    onChanged: (String y) {
+                      pass = y;
+                    },
+                  ),
                 ),
                 Pinned.fromPins(
                   Pin(size: 164.0, end: 72.0),
@@ -78,15 +84,15 @@ class Signinrecruiter extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => Forgotpassword(),
+                        pageBuilder: () => const Forgotpassword(),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       'Forgot password ?',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w300,
                       ),
                       textAlign: TextAlign.left,
@@ -103,12 +109,12 @@ class Signinrecruiter extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 33.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'plumbr.',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 25,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -127,12 +133,12 @@ class Signinrecruiter extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 20.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'All Rights Reserved',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 15,
-                            color: const Color(0xff3c3c3c),
+                            color: Color(0xff3c3c3c),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -149,15 +155,15 @@ class Signinrecruiter extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => CreateAccountRecruiter(),
+                        pageBuilder: () => const CreateAccountRecruiter(),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       'Create an account',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xff3c3c3c),
+                        color: Color(0xff3c3c3c),
                         fontWeight: FontWeight.w300,
                         height: 2.5,
                       ),
@@ -189,25 +195,26 @@ class Signinrecruiter extends StatelessWidget {
                     ),
                   ),
                 ),
-                GestureDetector(onTap: ()async{
-                  final user = await _auth.signInWithEmailAndPassword(
-                      email: email, password: pass);
-                  if (user != null) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                          return Recruiterdashboard();
-                        }));
-                  }
-                },
+                GestureDetector(
+                  onTap: () async {
+                    final user = await _auth.signInWithEmailAndPassword(
+                        email: email, password: pass);
+                    if (user != null) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Recruiterdashboard();
+                      }));
+                    }
+                  },
                   child: Pinned.fromPins(
                     Pin(size: 64.0, middle: 0.504),
                     Pin(size: 26.0, middle: 0.5714),
-                    child: Text(
+                    child: const Text(
                       'Sign In',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w300,
                       ),
                       textAlign: TextAlign.left,
@@ -227,12 +234,12 @@ class Signinrecruiter extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 39.0, middle: 0.5),
-                  child: Text(
+                  child: const Text(
                     'Recruiter',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 30,
-                      color: const Color(0xff3b3b3b),
+                      color: Color(0xff3b3b3b),
                       fontWeight: FontWeight.w300,
                     ),
                     textAlign: TextAlign.left,
