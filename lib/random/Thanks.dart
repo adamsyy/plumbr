@@ -16,7 +16,7 @@ class _ThanksState extends State<Thanks> {
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Container(height:500,width: MediaQuery.of(context).size.width /1, decoration: BoxDecoration(color: Colors.grey[200],borderRadius: BorderRadius.circular(8.0),
-          boxShadow:  [
+          boxShadow:  const [
             BoxShadow(
               color: Colors.black,
               blurRadius: 2.0,
@@ -30,11 +30,11 @@ class _ThanksState extends State<Thanks> {
           ],
         ),
           child: Column(
-            children: [
+            children: const [
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: Padding(
-                    padding: const EdgeInsets.only(top: 35.0),
+                    padding: EdgeInsets.only(top: 35.0),
                     child: Text('Thank You For Shopping With Us!',style: TextStyle(fontSize: 70,fontWeight: FontWeight.bold),)
                 ),
               ),

@@ -6,7 +6,7 @@ import 'CreateAccountRecruiter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Recruiter extends StatelessWidget {
-  Recruiter({
+  const Recruiter({
     Key key,
   }) : super(key: key);
   @override
@@ -23,12 +23,12 @@ class Recruiter extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 84.0, middle: 0.4173),
                   Pin(size: 26.0, end: 0.0),
-                  child: Text(
+                  child: const Text(
                     'All Rights Reserved',
                     style: TextStyle(
                       fontFamily: 'Roboto',
                       fontSize: 10,
-                      color: const Color(0xff3c3c3c),
+                      color: Color(0xff3c3c3c),
                       fontWeight: FontWeight.w100,
                     ),
                     textAlign: TextAlign.left,
@@ -55,12 +55,12 @@ class Recruiter extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 92.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'plumbr.',
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 70,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w500,
                           ),
                           textAlign: TextAlign.left,
@@ -79,12 +79,12 @@ class Recruiter extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 53.0, middle: 0.5),
-                        child: Text(
+                        child: const Text(
                           'Recruiter',
                           style: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 40,
-                            color: const Color(0xff3b3b3b),
+                            color: Color(0xff3b3b3b),
                             fontWeight: FontWeight.w300,
                           ),
                           textAlign: TextAlign.left,
@@ -103,7 +103,7 @@ class Recruiter extends StatelessWidget {
                       PageLinkInfo(
                         ease: Curves.easeInOut,
                         duration: 0.4,
-                        pageBuilder: () => Signinrecruiter(),
+                        pageBuilder: () => const Signinrecruiter(),
                       ),
                     ],
                     child: Stack(
@@ -121,12 +121,12 @@ class Recruiter extends StatelessWidget {
                         Pinned.fromPins(
                           Pin(size: 64.0, middle: 0.504),
                           Pin(size: 26.0, middle: 0.5714),
-                          child: Text(
+                          child: const Text(
                             'Sign In',
                             style: TextStyle(
                               fontFamily: 'Roboto',
                               fontSize: 20,
-                              color: const Color(0xffffffff),
+                              color: Color(0xffffffff),
                               fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.left,
@@ -151,7 +151,7 @@ class Recruiter extends StatelessWidget {
                             PageLinkInfo(
                               ease: Curves.easeInOut,
                               duration: 0.4,
-                              pageBuilder: () => CreateAccountRecruiter(),
+                              pageBuilder: () => const CreateAccountRecruiter(),
                             ),
                           ],
                           child: Container(
@@ -165,12 +165,12 @@ class Recruiter extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(size: 140.0, middle: 0.5327),
                         Pin(size: 26.0, middle: 0.5714),
-                        child: Text(
+                        child: const Text(
                           'Create Account',
                           style: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 20,
-                            color: const Color(0xffffffff),
+                            color: Color(0xffffffff),
                             fontWeight: FontWeight.w300,
                           ),
                           textAlign: TextAlign.left,

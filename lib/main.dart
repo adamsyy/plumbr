@@ -2,18 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:plumbr/recruiter/Recruiter.dart';
-import 'package:plumbr/fetch_location/Mapshow.dart';
 import 'package:plumbr/general/Start.dart';
-import 'package:plumbr/random/Test.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:plumbr/recruiter/Recruiterdashboard.dart';
+
 final _auth = FirebaseAuth.instance;
 final fire = FirebaseFirestore.instance;
 double latitude;
 double longitude;
-List<String> list=new List<String>();
+List<String> list = <String>[];
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -28,8 +25,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-
-getDocs();
+    getDocs();
 
     super.initState();
   }
@@ -47,15 +43,17 @@ getDocs();
       print(e);
     }
   }
-  Future getDocs() async{
+
+  Future getDocs() async {
     await FirebaseFirestore.instance
         .collection('employee')
         .get()
         .then((QuerySnapshot querySnapshot) {
-      querySnapshot.docs.forEach((doc) {
-        if(doc["work"].toString()=="Maid"){  list.add(doc["email"]);
-       }
-      } );
+      for (var doc in querySnapshot.docs) {
+        if (doc["work"].toString() == "Maid") {
+          list.add(doc["email"]);
+        }
+      }
     });
     print(list);
   }
@@ -68,7 +66,7 @@ getDocs();
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Start(),
+      home: const Start(),
     );
   }
 }

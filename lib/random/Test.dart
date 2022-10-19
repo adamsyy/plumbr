@@ -45,6 +45,6 @@ getcurrentlocation();
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Container(color:Colors.green,child: Text('hi'),));
+    return Center(child: Container(color:Colors.green,child: const Text('hi'),));
   }
 }
